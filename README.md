@@ -26,6 +26,14 @@
 
 ## 快速开始
 
+整库安装：
+
+```bash
+npx skills add skills-repo/blockchain-developer -g -y
+```
+
+按需安装子技能：
+
 ```bash
 npx skills add skills-repo/blockchain-developer@solidity-security -g -y
 npx skills add skills-repo/blockchain-developer@defi-yield -g -y
