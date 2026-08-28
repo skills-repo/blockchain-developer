@@ -52,3 +52,10 @@
 
 - 本 playbook 不替代专业审计；仅做部署前自检基线。
 - 不替用户决定"是否上线"——产出报告，拍板留给用户。
+
+## 相关子技能与层次边界
+
+- **落地动作（L3）**：需要按漏洞目录逐条修复、写安全合约代码 → `skills/solidity-security/SKILL.md`；需要把合约/经济风险纳入项目研究 → `skills/crypto-report/SKILL.md`。
+- **配套资源**：静态初筛用 `scripts/solidity_lint.py`（浮动 pragma / 旧编译器 / `tx.origin` / `unchecked` / 废弃函数）；上线前逐项核对 `assets/contract-audit-checklist.md`。
+- **兄弟参考**：收益/经济面风险不在本文范围，见 `references/defi-tokenomics.md`。
+- **层次边界**：本 playbook 只讲"漏洞目录 + 审计工作流 + 检查清单"（方法论层）；具体修复代码段与 CEI/Pull-over-Push 模式落地由 `skills/solidity-security/` 负责，本文不重复。

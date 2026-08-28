@@ -80,3 +80,8 @@ tags:
 - 不覆盖非 EVM 链（Solana/Rust、Move 等有独立安全模型）
 - MEV / 区块级攻击需要额外专业工具（如 Flashbots）
 - 不覆盖前端/桥接/预言机的非合约层攻击面
+
+## 相关参考（Playbook）
+
+- 智能合约安全审计方法论（漏洞目录、5 步工作流、上线前清单）→ `../../references/smart-contract-security.md`
+- 静态初筛脚本 `../../scripts/solidity_lint.py`；上线前检查清单 `../../assets/contract-audit-checklist.md`

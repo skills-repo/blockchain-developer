@@ -77,3 +77,7 @@ tags:
 - 不覆盖杠杆挖矿策略（杠杆放大风险，不适合本技能定位）
 - 非同质化 DeFi（如 NFT 借贷、RWA）不在覆盖范围
 - 税务影响需咨询专业人士
+
+## 相关参考（Playbook）
+
+- DeFi 收益与 Tokenomics 分析（真实收益率、解锁冲击、收益来源四象限）→ `../../references/defi-tokenomics.md`

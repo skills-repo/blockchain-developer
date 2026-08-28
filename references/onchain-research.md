@@ -45,3 +45,9 @@
 
 - 不做价格预测；只做基于事实的结构化判断。
 - 数据可能有延迟/刷量，所有量化结论附快照时间。
+
+## 相关子技能与层次边界
+
+- **落地动作（L3）**：需要一份整合 tokenomics+链上+竞争的研究报告 → `skills/crypto-report/SKILL.md`；需要从市场热度/聪明钱/情绪发现待研究标的 → `skills/crypto-market-rank/SKILL.md`。
+- **兄弟参考**：本流水线的 Tokenomics 阶段展开在 `references/defi-tokenomics.md`；合约相关风险维度见 `references/smart-contract-security.md`。
+- **层次边界**：本 playbook 只讲"研究流程 + 链上指标解读 + 竞争格局框架"（方法论层）；具体"出一份格式化的研究报告"由 `skills/crypto-report/` 负责，本文不重复其输出模板细节。

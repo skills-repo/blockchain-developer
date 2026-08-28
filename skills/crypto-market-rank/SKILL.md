@@ -78,3 +78,8 @@ tags:
 - 社交情绪可能被操纵（刷量、机器人）
 - 不覆盖 CEX 订单簿和衍生品数据
 - 不给出买入或卖出建议——仅供研究参考
+
+## 相关参考（Playbook）
+
+- 链上研究方法论（指标解读陷阱、竞争格局、风险论题）→ `../../references/onchain-research.md`
+- 把市场发现沉淀为结构化研究 → `../../references/onchain-research.md` + `../../skills/crypto-report/SKILL.md`

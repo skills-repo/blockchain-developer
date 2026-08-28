@@ -46,3 +46,9 @@
 
 - 不构成投资建议；只做框架化分析。
 - 链上数据会滞后，结论需标注数据快照时间。
+
+## 相关子技能与层次边界
+
+- **落地动作（L3）**：需要跨协议收益对比、流动性分析、质押/再质押策略设计 → `skills/defi-yield/SKILL.md`；需要把 tokenomics 纳入一份完整项目研究 → `skills/crypto-report/SKILL.md`。
+- **兄弟参考**：tokenomics 是 `references/onchain-research.md` 研究流水线第 2 阶段（定位 → Tokenomics → 链上验证 → 竞争 → 风险）；合约经济风险见 `references/smart-contract-security.md`。
+- **层次边界**：本 playbook 只讲"收益来源判断 + 真实收益率 + 解锁冲击"的量化框架（决策层）；具体"扫哪些协议、怎么配仓位"由 `skills/defi-yield/` 负责，本文不重复其策略落地细节。

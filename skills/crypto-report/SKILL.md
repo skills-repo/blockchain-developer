@@ -92,3 +92,9 @@ tags:
 - 不构成投资建议——研究报告仅供信息参考
 - 不对智能合约做技术审计
 - 不覆盖非 EVM 生态的深层分析
+
+## 相关参考（Playbook）
+
+- Tokenomics 量化框架（收益来源、真实收益率、解锁冲击）→ `../../references/defi-tokenomics.md`
+- 链上研究方法论（指标字典、验证叙事、竞争/风险论题）→ `../../references/onchain-research.md`
+- 合约与经济安全维度（漏洞目录、审计工作流）→ `../../references/smart-contract-security.md`
