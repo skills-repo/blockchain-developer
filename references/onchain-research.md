@@ -24,6 +24,44 @@
 
 **验证叙事原则**：任何"增长"叙事都必须有至少一项链上指标佐证；纯白皮书叙事不计入结论。
 
+## 速算命令（第 2–3 阶段，确定性）
+
+流水线里凡是"算出来"的数字一律走脚本，避免手算口误与口径漂移：
+
+```bash
+# 阶段 2 Tokenomics：估值与解锁压力（阈值与判定见 defi-tokenomics.md）
+python3 scripts/defi_yield_calc.py tvl-mcap --tvl 40000000 --mcap 500000000
+python3 scripts/defi_yield_calc.py unlock --tokens 5000000 --price 1.2 --daily-volume 8000000
+
+# 阶段 3 链上验证：收益是否由真实需求支撑，而非排放补贴
+python3 scripts/defi_yield_calc.py real-yield --revenue 1200000 --emissions 900000 --staked-tvl 25000000
+
+# 一次性出四项 + 风险信号，--json 直接并入报告的"链上证据表"
+python3 scripts/defi_yield_calc.py screen --apr 0.45 --revenue 1200000 --emissions 900000 \
+    --staked-tvl 25000000 --tokens 5000000 --price 1.2 --daily-volume 8000000 \
+    --tvl 40000000 --mcap 500000000 --json
+
+# 若研究对象含自有合约，安全维度先过静态初筛（详见 smart-contract-security.md）
+python3 scripts/solidity_lint.py contracts/ --json
+```
+
+**取数纪律**：同一份报告内所有指标必须取**同一时点**快照；跨日拼接的数据不得放进同一张证据表。
+
+## 研究前检查清单
+
+- [ ] 五阶段流水线已按序走完，未跳过阶段 3（链上验证）直接下结论
+- [ ] 每条"增长"叙事都已绑定至少一项链上指标，无纯白皮书论断
+- [ ] 活跃地址已配合留存看，已排除刷量可能
+- [ ] TVL 来源稳定性已判断（真实使用 vs 激励堆积），未把高 TVL 当安全
+- [ ] 手续费收入已确认是否处于补贴期
+- [ ] 持币集中度已剔除交易所冷热钱包
+- [ ] 量化项已用 `defi_yield_calc.py` 计算而非手算
+- [ ] 竞争格局四维（赛道容量 / 差异化 / 护城河 / 替代风险）均已填写
+- [ ] Bull / Bear case 各自列出**可观测信号**，而非主观形容
+- [ ] 已标注最脆弱的关键假设，并说明假设破裂后结论如何失效
+- [ ] 全部数据附同一时点快照时间
+- [ ] 报告含"分析不代表投资建议"声明
+
 ## 竞争格局框架
 
 - **赛道容量**：TAM 与当前渗透率。

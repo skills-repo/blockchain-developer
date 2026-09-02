@@ -48,11 +48,16 @@ metadata:
 放在 `scripts/`，优先用脚本处理重复/确定性任务，而非每次重写代码：
 
 - `scripts/solidity_lint.py <文件/目录> [--json] [--strict]` — 静态初筛 Solidity 合约：浮动 pragma、旧编译器、tx.origin、unchecked、已废弃函数，输出分级发现。
+- `scripts/defi_yield_calc.py <子命令> [--json]` — DeFi 收益与 Tokenomics 确定性速算（APY / 真实收益率 / 解锁冲击比 / TVL-MCap），阈值与 `references/defi-tokenomics.md` 同步；`screen` 子命令一次跑完四项并汇总风险信号（命中阈值退出码 1）。
 
 运行示例：
 
 ```bash
 python3 scripts/solidity_lint.py contracts/ --strict
+# DeFi 收益/解锁压力速算：APY 换算 + 真实收益率 + 解锁冲击 + TVL/MCap 四项汇总
+python3 scripts/defi_yield_calc.py screen --apr 0.45 --revenue 1200000 --emissions 900000 \
+    --staked-tvl 25000000 --tokens 5000000 --price 1.2 --daily-volume 8000000 \
+    --tvl 40000000 --mcap 500000000 --json
 ```
 
 ## 模板资源
